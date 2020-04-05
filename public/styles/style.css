@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{margin: 0 auto; width:1240px;}
+#characters{overflow: hidden;background-color: #333}
+#characters li img{width:  100%;height:400px}
+#characters li{color: #fff;background-color: #777;margin: 10px;padding:0px;width: 23%;
+    display: inline-block;}
+.name {
+    opacity: 0.7;
+    padding: 10px;
+    position: relative;
+    top: -8.6%;
+    background-color: #333;
+    width: 100%;
+    font-size: 20px;
+}
+.id_key{
+    display: inline-block;
+    opacity: 0.7;
+    padding-left: 10px;
+    position: relative;
+    top: -60px;
+    background-color: #333;
+    width: 20%;
+    left: 0px;
+    font-size: 20px;
+
+}
+.id{
+    display: inline-block;
+    opacity: 0.7;
+    padding-left: 10px;
+    position: relative;
+    top: -80px;
+    background-color: #333;
+    width: 81%;
+    left: 46px;
+    font-size: 20px;
+}
+.species_key, .status_key, .gender_key, .origin_key, .lastlocation_key{
+    display: inline-block;
+    padding: 8px;
+    text-transform: uppercase;
+    color: #C0C0C0;
+}
+.species, .status, .gender, .origin, .lastlocation{
+    display: inline-block;
+    padding: 8px;
+    text-transform: uppercase;
+    float: right;
+    color: orange;
+}
+
+hr{
+    border-top: 1px solid #C0C0C0;
+    margin: 0;
+}
+
+.searchForm{
+    display: inline-block;
+    height: 15px;
+    padding-left: 10px;
+    width: 20%;
+}
+.searchWrapper{
+    margin-bottom: 20px;
+}
+.btn-outline-success{
+    height: 30px;
+}
+
+label {
+    width: 90%;
+    padding: 8px;
+}
+
+#speciesFilterList, #genderFilterList{
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 18px;
+    margin-top: 10px;
+}
+h2{
+    font-size: 25px;
+    font-weight : bold;
+    margin-bottom : 10px;
+}
+
+h3{
+    font-weight: bold;
+}
+
+.searchWrapper, .sortWrapper{
+    display: inline-block;
+}
+.sortWrapper{
+    float: right;
+}
+.dropdown-item{
+    display: block;
+    padding: 6px;
+}
+a.dropdown-item{
+    cursor: pointer;
+    text-decoration: none;
+}
+.searchWrapper{
+    width: 66%
+}

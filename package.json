@@ -1,0 +1,30 @@
+{
+  "name": "http-server-sample",
+  "version": "1.0.0",
+  "description": "Simple http-server sample code",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikash-bhardwaj/http-server-sample.git"
+  },
+  "keywords": [
+    "http-server-sample"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vikash-bhardwaj/http-server-sample/issues"
+  },
+  "homepage": "https://github.com/vikash-bhardwaj/http-server-sample#readme",
+  "dependencies": {
+    "http-server": "0.12.1",
+    "require": "^2.4.20",
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  }
+}

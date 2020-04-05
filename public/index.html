@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="./dist/main.js"></script> -->
+    <script src="./scripts/app.js"></script>
+</head>
+
+<body>
+    <div class="wrapper container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-sm-2 col-xs-12">
+                <h2>Filters</h2>
+                <ul id="speciesFilterList">
+                    <h3 class="headingFilter">Species</h3>
+                    <div class="speciesFilterListDiv"></div>
+                </ul>
+
+                <ul id="genderFilterList">
+                    <h3 class="headingFilter">Gender</h3>
+                    <div class="genderFilterListDiv"></div>
+                </ul>
+            </div>
+            <div class="col-lg-10 col-sm-10 col-xs-12">
+                <div class="searchWrapper">
+                    <h2>Search By Name</h2>
+                    <input class="form-control mr-sm-2 searchForm" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 abc" onClick="searchByName()"
+                        type="submit">Search</button>
+                </div>
+                <div class="dropdown sortWrapper">
+                    <h2>Sort By: </h2>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" onClick="sorting(event)">Ascending</a>
+                        <a class="dropdown-item" onClick="sorting(event)">Descending</a>
+                    </div>
+                </div>
+                <ul id="characters"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
