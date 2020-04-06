@@ -1,12 +1,8 @@
-var selectedItemArray = [{ Field: 'species', Values: [] }, { Field: 'gender', Values: [] }];
-//const abc = require('./search');
-
-var characters = [];
 //Function to display characters
 function showCharacters(characters) {
     $("#characters").html("");
-    characters.map(function (character) { // Map through the results and for each run the code below
-        let li = document.createElement('li'), //  Create the elements we need
+    characters.map(function (character) {
+        let li = document.createElement('li'),
             img = document.createElement('img'),
             id = document.createElement('p'),
             status = document.createElement('p'),
@@ -21,7 +17,7 @@ function showCharacters(characters) {
             gender_key = document.createElement('p'),
             origin_key = document.createElement('p'),
             lastlocation_key = document.createElement('p');
-        img.src = character.image; $(img).addClass('img'); // Add the source of the image to be the src of the img element
+        img.src = character.image; $(img).addClass('img');
         name.innerHTML = character.name; $(name).addClass('name');
         id.innerHTML = character.id; $(id).addClass('id');
         status.innerHTML = character.status; $(status).addClass('status');
@@ -40,6 +36,8 @@ function showCharacters(characters) {
         $('#characters').append(li);
 
     });
+
+    //setting maximum height for all the character blocks
     var maxHeight = 0;
 
     $('#characters li').each(function () {
@@ -85,13 +83,7 @@ window.customFilter = function (selectedItemArray) {
         .then(res => res.json())
         .then(json => {
             Array.prototype.flexFilter = function (info) {
-
-                // Set our variables
                 var matchesFilter, matches = [], count;
-
-                // Helper function to loop through the filter criteria to find matching values
-                // Each filter criteria is treated as "AND". So each item must match all the filter criteria to be considered a match.
-                // Multiple filter values in a filter field are treated as "OR" i.e. ["Blue", "Green"] will yield items matching a value of Blue OR Green.
                 matchesFilter = function (item) {
                     count = 0
                     for (var n = 0; n < info.length; n++) {
@@ -99,30 +91,22 @@ window.customFilter = function (selectedItemArray) {
                             count++;
                         }
                     }
-                    // If TRUE, then the current item in the array meets all the filter criteria
                     return count == info.length;
                 }
-
-                // Loop through each item in the array
                 for (var i = 0; i < this.length; i++) {
-                    // Determine if the current item matches the filter criteria
                     if (matchesFilter(this[i])) {
                         matches.push(this[i]);
                     }
                 }
-
-                // Give us a new array containing the objects matching the filter criteria
                 return matches;
             }
             var filtered = json.results.flexFilter(selectedItemArray);
             showCharacters(filtered);
-            console.log(filtered);
-            console.log(selectedItemArray);
         });
 
 }
 
-//Custom Filter List for Species and Gender
+//Custom Filter List options for Species and Gender
 function createCustomFilterList() {
     fetch('https://rickandmortyapi.com/api/character/')
         .then(res => res.json())
@@ -141,6 +125,7 @@ function createCustomFilterList() {
         });
 }
 
+//Search implementation of Characters when user filters
 window.filterArray = function (event) {
     var a;
     var selectedFilterValue = event.target.value;
@@ -179,6 +164,7 @@ window.filterArray = function (event) {
         return getInformation()
 }
 
+//Sorting character list in ascending or descending order
 window.sorting = function (event) {
     if (event.target.text == "Ascending") {
         fetch('https://rickandmortyapi.com/api/character/')
@@ -198,5 +184,7 @@ window.sorting = function (event) {
     }
 
 }
+
+//Showing Filter list options and all the characters on page load
 $(window).load(getInformation(), createCustomFilterList());
 
