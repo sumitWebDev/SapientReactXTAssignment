@@ -1,3 +1,7 @@
+var selectedItemArray = [
+    { 'Field': 'species', 'Values': [] },
+    { 'Field': 'gender', 'Values': [] },
+]
 //Function to display characters
 function showCharacters(characters) {
     $("#characters").html("");
