@@ -4,6 +4,7 @@
 ### Project Title :
 #### Develop a front-end application which would let the users help list and browse all Characters of Rick and Morty Show.
 
+### API Used : https://rickandmortyapi.com/api/character/
 ### Features:
  1.  On Page load, application shows all the characters.
  2. User can search by name. The names are not case sensitive. For example: (Summer Smith can be searched using summersmith too )
