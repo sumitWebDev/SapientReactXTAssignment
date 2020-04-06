@@ -17,7 +17,10 @@
 ### Demo:
 #### Screenshots:
 1. Desktop ![Desktop View](https://raw.githubusercontent.com/sumitWebDev/SapientReactXTAssignment/master/Desktop.png)
+2. Tablet ![Tablet View](https://raw.githubusercontent.com/sumitWebDev/SapientReactXTAssignment/master/Tablet.png)
+3. Mobile ![Mobile View](https://raw.githubusercontent.com/sumitWebDev/SapientReactXTAssignment/master/mobile.png)
 
+Video Demo: 
 
 ### Tech Stack:
 
