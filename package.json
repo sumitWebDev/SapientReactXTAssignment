@@ -4,7 +4,7 @@
   "description": "Simple http-server sample code",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack && eslint ./public --fix &&  http-server"
+    "start": "npx webpack && eslint ./public --fix && csslint ./public/styles/style.css && http-server"
   },
   "repository": {
     "type": "git",
