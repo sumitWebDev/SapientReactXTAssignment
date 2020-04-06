@@ -65,7 +65,7 @@ function getInformation() {
 
 
 //Function to show characters on search by Name
-function searchByName() {
+window.searchByName = function () {
     let searchKey = $('.searchForm').val().toLowerCase().replace(/\s+/g, '');
     fetch('https://rickandmortyapi.com/api/character/')
         .then(res => res.json())
