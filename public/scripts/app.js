@@ -141,7 +141,7 @@ function createCustomFilterList() {
         });
 }
 
-function filterArray(event) {
+window.filterArray = function (event) {
     var a;
     var selectedFilterValue = event.target.value;
     var selectedFilterParent = $(event.target).attr('data-parent');
@@ -176,10 +176,10 @@ function filterArray(event) {
     else if (selectedItemArray[0].Values.length > 0 && selectedItemArray[1].Values.length > 0)
         return customFilter(selectedItemArray);
     else
-        return getInformation
+        return getInformation()
 }
 
-function sorting(event) {
+window.sorting = function (event) {
     if (event.target.text == "Ascending") {
         fetch('https://rickandmortyapi.com/api/character/')
             .then(res => res.json())

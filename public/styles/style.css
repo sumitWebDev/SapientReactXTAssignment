@@ -109,3 +109,61 @@ a.dropdown-item{
 .searchWrapper{
     width: 66%
 }
+
+/* media queries for tablet devices */
+
+@media only screen and (max-width: 1024px){
+    .wrapper{
+        width: auto;
+    }
+    label{
+        width: 80%;
+    }
+    #characters{
+        padding: 0px;
+    }
+    #characters li {
+        padding: 5px;
+        width: 32%;
+        margin: 4px;
+    }
+    .name{
+        top: -8.71%
+    }
+    .id_key{
+        top: -60px;
+        width: 16%;
+        left: 0px;
+    }
+    .id{
+        top: -60px;
+        width: 84%;
+        left: 0;
+    }
+}
+/* media queries for mobile device*/
+@media only screen and (max-width: 767px){
+    .wrapper{
+        width: auto;
+    }
+    label{
+        width: 93%;
+    }
+    #characters li {
+        width: 47%;
+    }
+    .sortWrapper{
+        float: none;
+    }
+    .searchWrapper, .sortWrapper{
+        display: block;
+    }
+    .sortWrapper{
+        margin-bottom: 10px;
+    }
+    .name{
+        top: -8%;
+    }
+
+}
+
