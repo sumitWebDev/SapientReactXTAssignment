@@ -36,7 +36,7 @@ function showCharacters(characters) {
         origin_key.innerHTML = "origin"; $(origin_key).addClass('origin_key')
         lastlocation_key.innerHTML = "last location"; $(lastlocation_key).addClass('lastlocation_key')
 
-        $(li).append($(li).append(img, name, id_key, id, status_key, status, '<hr>', species_key, species, '<hr>', gender_key, gender, '<hr>', origin_key, origin_key, '<hr>', lastlocation_key, lastlocation)); // Append all our elements).addClass('col-lg-3'); // Append all our elements
+        $(li).append($(li).append(img, name, id_key, id, status_key, status, '<hr>', species_key, species, '<hr>', gender_key, gender, '<hr>', origin_key, origin, '<hr>', lastlocation_key, lastlocation)); // Append all our elements).addClass('col-lg-3'); // Append all our elements
         $('#characters').append(li);
 
     });
