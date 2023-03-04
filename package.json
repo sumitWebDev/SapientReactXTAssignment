@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/vikash-bhardwaj/http-server-sample#readme",
   "dependencies": {
-    "http-server": "0.12.1",
+    "http-server": "0.12.3",
     "require": "^2.4.20",
     "webpack": "^4.42.1"
   },
